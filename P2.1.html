@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Empezar a Jugar!</title>
+		<link rel="stylesheet" href="./P2.css" >
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<div class="titulos" id="título-principal">
+			<h1>Perfil de Jugador</h1>
+	</div>
+	<div class="texto" id="texto-principal2">
+		<p >
+			Rellene el siguiente formulario para que le podamos brindar una experiencia más personalizada.
+		</p>
+	</div>	
+	<div class="formulario">
+		<form id="formulario1">
+			<ul>
+				<li>
+			    	<label for="nombre">Nombre:</label>
+			    	<input type="texto" id="nombre" name="user_name" placeholder="Usuario">
+			  	</li>
+			  	<li>
+			    	<label for="mail">Correo electrónico:</label>
+			   	 	<input type="mail" id="mail" name="user_mail" placeholder="Usuario@Ajedrez.com">
+			  	</li>
+			  	<li>
+			    	<label for="observaciones">Observaciones:</label>
+			    	<textarea id="observaciones" name="observaciones_usuario" placeholder="Llevo x años jugando al ajedrez y me considero de nivel y."></textarea>
+			  	</li>
+			  	<li class="button">
+ 					<button class="boton-general" onclick="validarFormulario()">Envíe su información</button>
+				</li>
+			</ul>
+		</form>
+	</div>
+	<video src="./video.mp3" preload="auto" autoplay></video>
+    <script>
+      function validarFormulario() {
+        var nombre = document.forms["formulario1"]["nombre"].value;
+        var email = document.forms["formulario1"]["mail"].value;
+        if (nombre == "" || email == "") {
+          alert("Por favor, completa todos los campos del formulario");
+        }
+      }
+    </script>
+
+		<div class="link" id="navegacion-retroceso">
+			<a href="./P2.html"><-- Volver atrás</a>
+		</div>
+		<div class="link" id="navegacion-avance">
+			<a href="./P2.2.html">Siguiente página--></a>
+		</div>
+</html>
